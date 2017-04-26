@@ -1,0 +1,93 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "react-native-cafe-bazaar",
+        "scope": null,
+        "escapedName": "react-native-cafe-bazaar",
+        "name": "react-native-cafe-bazaar",
+        "rawSpec": "",
+        "spec": "latest",
+        "type": "tag"
+      },
+      "/Users/Parna/Area-51/Smoothy"
+    ]
+  ],
+  "_from": "react-native-cafe-bazaar@latest",
+  "_id": "react-native-cafe-bazaar@0.0.2",
+  "_inCache": true,
+  "_location": "/react-native-cafe-bazaar",
+  "_nodeVersion": "7.5.0",
+  "_npmOperationalInternal": {
+    "host": "packages-12-west.internal.npmjs.com",
+    "tmp": "tmp/react-native-cafe-bazaar-0.0.2.tgz_1492938239266_0.7257785925175995"
+  },
+  "_npmUser": {
+    "name": "contoriel",
+    "email": "contoriel@gmail.com"
+  },
+  "_npmVersion": "4.1.2",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "react-native-cafe-bazaar",
+    "scope": null,
+    "escapedName": "react-native-cafe-bazaar",
+    "name": "react-native-cafe-bazaar",
+    "rawSpec": "",
+    "spec": "latest",
+    "type": "tag"
+  },
+  "_requiredBy": [
+    "#USER"
+  ],
+  "_resolved": "https://registry.npmjs.org/react-native-cafe-bazaar/-/react-native-cafe-bazaar-0.0.2.tgz",
+  "_shasum": "28ecb4660054e6c8dc4a0513ecea27c13e00656e",
+  "_shrinkwrap": null,
+  "_spec": "react-native-cafe-bazaar",
+  "_where": "/Users/Parna/Area-51/Smoothy",
+  "author": {
+    "name": "Omid Golshan",
+    "email": "contoriel@gmail.com"
+  },
+  "dependencies": {},
+  "description": "cafe bazaar billing feature for react native application",
+  "devDependencies": {},
+  "directories": {},
+  "dist": {
+    "shasum": "28ecb4660054e6c8dc4a0513ecea27c13e00656e",
+    "tarball": "https://registry.npmjs.org/react-native-cafe-bazaar/-/react-native-cafe-bazaar-0.0.2.tgz"
+  },
+  "jest": {
+    "preset": "react-native"
+  },
+  "keywords": [
+    "react-native",
+    "billing",
+    "iap",
+    "cafe",
+    "bazaar",
+    "persian",
+    "market"
+  ],
+  "license": "ISC",
+  "main": "index.js",
+  "maintainers": [
+    {
+      "name": "contoriel",
+      "email": "contoriel@gmail.com"
+    }
+  ],
+  "name": "react-native-cafe-bazaar",
+  "optionalDependencies": {},
+  "private": false,
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "react-native-cafe-bazaar"
+  },
+  "scripts": {
+    "start": "node node_modules/react-native/local-cli/cli.js start",
+    "test": "jest"
+  },
+  "version": "1.0.0"
+}
