@@ -182,8 +182,8 @@ import {DeviceEventEmitter} from 'react-native';
       console.log(e);
     });
   }
+```
 
+### BACK TO BAZAAR DEVELOPER PANEL
 
-  ### BACK TO BAZAAR DEVELOPER PANEL
-
-  1. Upload the updated APK to Bazaar Developer Panel
+1. Upload the updated APK to Bazaar Developer Panel
