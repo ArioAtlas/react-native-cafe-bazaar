@@ -87,7 +87,8 @@ import CafeBazaar from 'react-native-cafe-bazaar'
 ...
 
 CafeBazaar.open()
-.then(() => CafeBazaar.purchase('YOUR_SKU','DEVELOPER_PAYLOAD',RC_REQUEST));
+.then(() => CafeBazaar.purchase('YOUR_SKU','DEVELOPER_PAYLOAD',RC_REQUEST))
+.catch(err => console.log('CafeBazaar err:', err))
 ```
 
 ### close()
@@ -98,7 +99,8 @@ CafeBazaar.open()
 .then((details) => {
   console.log(details)
   return CafeBazaar.close()
-});
+})
+.catch(err => console.log('CafeBazaar err:', err))
 ```
 
 ### purchase('YOUR_SKU','DEVELOPER_PAYLOAD',RC_REQUEST)
@@ -124,7 +126,8 @@ CafeBazaar.open()
 CafeBazaar.purchase('YOUR_SKU','DEVELOPER_PAYLOAD',RC_REQUEST)
 .then((details) => {
   console.log(details)
-});
+})
+.catch(err => console.log('CafeBazaar err:', err))
 ```
 
 ### consume('YOUR_SKU')
@@ -145,7 +148,9 @@ CafeBazaar.purchase('YOUR_SKU','DEVELOPER_PAYLOAD',RC_REQUEST)
   * **mToken:**
 
 ```javascript
-CafeBazaar.consume('YOUR_SKU').then(...);
+CafeBazaar.consume('YOUR_SKU')
+.then(...)
+.catch(err => console.log('CafeBazaar err:', err))
 ```
 
 ### loadOwnedItems()
@@ -158,7 +163,8 @@ CafeBazaar.consume('YOUR_SKU').then(...);
 CafeBazaar.loadOwnedItems()
 .then((details) => {
   console.log(details)
-});
+})
+.catch(err => console.log('CafeBazaar err:', err))
 ```
 
 ### loadInventory([item1_SKU,item2_SKU,...])
@@ -170,7 +176,9 @@ CafeBazaar.loadOwnedItems()
 * **mSkuMap:** JSONObject
 
 ```javascript
-CafeBazaar.loadInventory([]).then(...);
+CafeBazaar.loadInventory([])
+.then(...)
+.catch(err => console.log('CafeBazaar err:', err))
 ```
 
 ## Use event listener
