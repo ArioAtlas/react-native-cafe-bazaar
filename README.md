@@ -6,12 +6,12 @@ InApp Billing for Cafe Bazaar (Android)
 ## Installation
 
 1. `npm install --save react-native-cafe-bazaar`
-2. Add the following in `android/setting.gradle`
+2. Add the following in `android/settings.gradle`
 
   ```gradle
   ...
   include ':react-native-cafe-bazaar', ':app'
-  project(':react-native-cafe-bazaar').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-cafe-bazaar/android')
+  project(':react-native-cafe-bazaar').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-cafe-bazaar/android/app')
   ```
 
 3. And the following in `android/app/build.gradle`
@@ -27,7 +27,7 @@ InApp Billing for Cafe Bazaar (Android)
 4. Update MainActivity or MainApplication depending on React Native version.
   - React Native version >= 0.29
     Edit `MainApplication.java`.
-    1. Add `import com.contoriel.cafebazaar.CafeBazaarPackage;`
+    1. Add `import com.contoriel.cafebazaar.CafeBazaarPackage;` in the top of the file.
     2. Register package:
     ```java
     @Override
@@ -53,6 +53,10 @@ or for React Native 29+
 new CafeBazaarPackage("YOUR_CAFE_BAZAAR_PUBLIC_KEY_HERE")
 ```
 
+Add the billing permission as follows to AndroidManifest.xml file:
+```xml
+<uses-permission android:name="com.farsitel.bazaar.permission.PAY_THROUGH_BAZAAR"></uses-permission>
+```
 
 
 ### ON THE BAZAAR DEVELOPER PANEL
@@ -78,6 +82,10 @@ Most of methods returns a `Promise`.
 **Important:** Opens the service channel to CafeBazaar. Must be called (once!) before any other billing methods can be called.
 
 ```javascript
+import CafeBazaar from 'react-native-cafe-bazaar'
+
+...
+
 CafeBazaar.open()
 .then(() => CafeBazaar.purchase('YOUR_SKU','DEVELOPER_PAYLOAD',RC_REQUEST));
 ```
