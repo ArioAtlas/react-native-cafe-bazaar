@@ -124,10 +124,11 @@ public class CafeBazaar extends ReactContextBaseJavaModule implements ActivityEv
               promise.reject(E_SETUP_DISCONNECT,"there no connection to cafe bazaar!");
             }
             // Is it a failure?
-            if (result.isFailure()) {
+            else if (result.isFailure()) {
               promise.reject(E_LAYOUT_ERROR,"Failed to query inventory: " + result.getMessage());
-            }
+            } else {
               promise.resolve(gson.toJson(inventory));
+            }
         }
     });
   }
@@ -142,11 +143,12 @@ public class CafeBazaar extends ReactContextBaseJavaModule implements ActivityEv
               promise.reject(E_SETUP_DISCONNECT,"there no connection to cafe bazaar!");
             }
             // Is it a failure?
-            if (result.isFailure()) {
+            else if (result.isFailure()) {
               promise.reject(E_LOAD_ITEMS_FAILURE,result.getMessage());
+            } else {
+              userInvo = inventory;
+              promise.resolve(gson.toJson(inventory.getAllOwnedSkus()));
             }
-            userInvo = inventory;
-            promise.resolve(gson.toJson(inventory.getAllOwnedSkus()));
         }
     });
   }
