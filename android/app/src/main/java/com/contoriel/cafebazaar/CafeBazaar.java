@@ -88,26 +88,32 @@ public class CafeBazaar extends ReactContextBaseJavaModule implements ActivityEv
       // enable debug logging (for a production application, you should set this to false).
       mHelper.enableDebugLogging(false);
 
+      try {
       // Start setup. This is asynchronous and the specified listener
       // will be called once setup completes.
-      mHelper.startSetup(new IabHelper.OnIabSetupFinishedListener() {
-          public void onIabSetupFinished(IabResult result) {
+          mHelper.startSetup(new IabHelper.OnIabSetupFinishedListener() {
+              public void onIabSetupFinished(IabResult result) {
 
-              if (result.isSuccess()) {
-                promise.resolve(gson.toJson(result));
+                  if (result.isSuccess()) {
+                    promise.resolve(gson.toJson(result));
+                  }
+                  else{
+                    // Have we been disposed of in the meantime? If so, quit.
+                    if (mHelper == null) {
+                      promise.reject(E_SETUP_DISCONNECT,"there no connection to cafe bazaar!");
+                    }
+                    else{
+                      // Oh noes, there was a problem.
+                      promise.reject(E_SETUP_ERROR,"There is a problem in cafe bazaar setup");
+                    }
+                  }
               }
-              else{
-                // Have we been disposed of in the meantime? If so, quit.
-                if (mHelper == null) {
-                  promise.reject(E_SETUP_DISCONNECT,"there no connection to cafe bazaar!");
-                }
-                else{
-                  // Oh noes, there was a problem.
-                  promise.reject(E_SETUP_ERROR,"There is a problem in cafe bazaar setup");
-                }
-              }
-          }
-      });
+          });
+
+      } catch(Exception excep) {
+          promise.reject(E_SETUP_DISCONNECT,"there no connection to cafe bazaar!");
+          Log.e("BazarOpenError", "Could not open bazar", excep);
+      }
   }
 
 
