@@ -5,7 +5,7 @@ InApp Billing for Cafe Bazaar (Android)
 
 ## Installation
 
-1. `npm install --save react-native-cafe-bazaar`
+1. `npm install --save react-native-cafe-bazaar` or `yarn add react-native-cafe-bazaar`
 2. Add the following in `android/settings.gradle`
 
   ```gradle
@@ -20,7 +20,7 @@ InApp Billing for Cafe Bazaar (Android)
   ...
   dependencies {
       ...
-      compile project(':react-native-cafe-bazaar')
+      implementation project(':react-native-cafe-bazaar')
   }
   ```
 
@@ -202,4 +202,4 @@ import {DeviceEventEmitter} from 'react-native';
 
 ### BACK TO BAZAAR DEVELOPER PANEL
 
-1. Upload the updated APK to Bazaar Developer Panel
+Upload the updated APK to Bazaar Developer Panel
