@@ -2,6 +2,7 @@ InApp Billing for Cafe Bazaar (Android)
 =============
 **React Native Cafe Bazaar** is built to provide an easy interface to InApp Billing for **Cafe Bazaar**,
 
+⚠️ Notice: This ibrary is not being activeliy updated. You might want to use the [RN library of the cafebazaar itself](https://github.com/cafebazaar/react-native-poolakey).
 
 ## Installation
 
