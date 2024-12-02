@@ -19,7 +19,6 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.lang.String;
 
 /**
  * Represents a block of information about in-app items.
@@ -78,7 +77,7 @@ public class Inventory {
     }
 
     /** Returns a list of all purchases. */
-    public List<Purchase> getAllPurchases() {
+    List<Purchase> getAllPurchases() {
         return new ArrayList<Purchase>(mPurchaseMap.values());
     }
 
